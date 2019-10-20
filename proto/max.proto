@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package service.findint.v1;
+
+option go_package = "service_findint_v1";
+
+service find {
+  // max finds the max number provided to server
+  rpc max(stream Request) returns(stream Response);
+}
+
+message Request {
+  // inp is the input integer to server
+  int32 inp = 1;
+}
+
+message Response {
+  // out is the max integer server returns
+  int32 out = 1;
+}
