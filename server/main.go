@@ -12,7 +12,7 @@ import (
 	"google.golang.org/grpc/reflection"
 )
 
-var l4g = setLog(os.Stdout, "server")
+var l4g = setLog(os.Stdout, "server : ")
 
 func setLog(out io.Writer, prefix string) *log.Logger {
 	l := log.New(out, prefix, log.Lshortfile)

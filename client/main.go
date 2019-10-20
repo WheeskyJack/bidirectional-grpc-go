@@ -13,7 +13,7 @@ import (
 	"google.golang.org/grpc"
 )
 
-var l4g = setLog(os.Stdout, "client")
+var l4g = setLog(os.Stdout, "client : ")
 
 func setLog(out io.Writer, prefix string) *log.Logger {
 	l := log.New(out, prefix, log.Lshortfile)

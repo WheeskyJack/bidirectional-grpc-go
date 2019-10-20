@@ -9,7 +9,7 @@ import (
 	"sync"
 )
 
-var l4g = setLog(os.Stdout, "max")
+var l4g = setLog(os.Stdout, "max : ")
 
 func setLog(out io.Writer, prefix string) *log.Logger {
 	l := log.New(out, prefix, log.Lshortfile)
